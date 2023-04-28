@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Probe implements I_Probe {
-	private static int idCounter = 1;
+	public static int idCounter = 0;
 	private static Faker fake = Faker.instance(new Locale("it-IT"));
 
 	private int id;
@@ -26,7 +26,7 @@ public class Probe implements I_Probe {
 	}
 
 	@Override
-	public void propagateAlarm(Probe p, int smokeDetection) {
-		
+	public Alarm propagateAlarm(Probe p, int smokeDetection) {
+		return new Alarm(p.id, p.latitude, p.longitude, smokeDetection);
 	}
 }

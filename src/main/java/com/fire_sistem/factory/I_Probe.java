@@ -4,6 +4,6 @@ public interface I_Probe {
 
 	void performDetection();
 	
-	void propagateAlarm(Probe p, int smokeDetection);
-	
+	Alarm propagateAlarm(Probe p, int smokeDetection);
+
 }
