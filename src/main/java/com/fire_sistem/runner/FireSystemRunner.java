@@ -4,7 +4,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import com.fire_sistem.design_patterns.ControlCentreProxy;
+import com.fire_sistem.design_patterns.ControlCenterProxy;
 import com.fire_sistem.design_patterns.Probe;
 import com.fire_sistem.design_patterns.ProbeChecker;
 import com.fire_sistem.design_patterns.ProbeFactory;
@@ -23,13 +23,13 @@ public class FireSystemRunner implements ApplicationRunner {
 		log.info("");
 		
 		// creating a national fire control station
-		ControlCentreProxy NationalControlCentre = new ControlCentreProxy();
+		ControlCenterProxy NationalControlCenter = new ControlCenterProxy();
 		
 		// creating a probechecker for each probe that will be created
-		ProbeChecker northernChecker = new ProbeChecker(NationalControlCentre);
-		ProbeChecker westernChecker = new ProbeChecker(NationalControlCentre);
-		ProbeChecker southernChecker = new ProbeChecker(NationalControlCentre);
-		ProbeChecker easternChecker = new ProbeChecker(NationalControlCentre);
+		ProbeChecker northernChecker = new ProbeChecker(NationalControlCenter);
+		ProbeChecker westernChecker = new ProbeChecker(NationalControlCenter);
+		ProbeChecker southernChecker = new ProbeChecker(NationalControlCenter);
+		ProbeChecker easternChecker = new ProbeChecker(NationalControlCenter);
 		
 		// creating 4 differents probe through probe factory
 		Probe northernProbe = ProbeFactory.getProbe();

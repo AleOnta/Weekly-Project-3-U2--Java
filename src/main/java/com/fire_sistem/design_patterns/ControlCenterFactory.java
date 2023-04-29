@@ -5,15 +5,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ControlCentreFactory {
+public class ControlCenterFactory {
 	 
 	 public static I_ControlCentre produceControlCentre(String inputString) {
 		 switch(inputString.toUpperCase()) {
 		 
 		 case "HTTP": 
-			 return new HTTPControlCentre();
-		 case "":
-			 throw new RuntimeException("Invalid input, remember to insert a type of communication channel");
+			 return new HTTPControlCenter();
 		 default: 
 			 throw new RuntimeException("Communication channel not implemented yet");
 		 
