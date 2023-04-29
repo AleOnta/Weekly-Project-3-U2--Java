@@ -1,4 +1,4 @@
-package com.fire_sistem.factory;
+package com.fire_sistem.design_patterns;
 
 public class ProbeFactory {
 	
