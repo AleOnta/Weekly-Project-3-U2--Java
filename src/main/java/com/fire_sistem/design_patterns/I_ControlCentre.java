@@ -2,6 +2,6 @@ package com.fire_sistem.design_patterns;
 
 public interface I_ControlCentre {
 
-	void detectOngoingFire(Probe probe);
+	void detectOngoingFire(AlarmInfo alarm);
 	
 }
