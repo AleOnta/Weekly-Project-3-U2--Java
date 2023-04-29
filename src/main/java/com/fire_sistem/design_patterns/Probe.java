@@ -13,12 +13,11 @@ import lombok.extern.slf4j.Slf4j;
 public class Probe extends Subject implements I_Probe {
 	
 	// static properties of the class
-	public static int idCounter = 0;
 	public static final int smokeLimit = 5;
 	private static Faker fake = Faker.instance(new Locale("it-IT"));
 
 	// properties of each instance
-	private int id;
+	private int id = ProbeFactory.idCounter;
 	private String longitude = fake.address().longitude();
 	private String latitude = fake.address().latitude();
 	private int smokeLevel = 0;
@@ -32,7 +31,9 @@ public class Probe extends Subject implements I_Probe {
 		if (smokeDetection >= smokeLimit) {
 			super.notifyControlCentre();
 		} else {
+			log.info("");
 			log.info("Detected smoke level of --> " + smokeDetection + " at probe with ID --> " + this.id + " | STATUS: OKAY");
+			log.info("");
 		}
 	}
 }
