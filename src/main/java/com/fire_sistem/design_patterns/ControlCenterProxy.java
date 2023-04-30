@@ -1,8 +1,8 @@
 package com.fire_sistem.design_patterns;
 
-public class ControlCenterProxy implements I_ControlCentre {
+public class ControlCenterProxy implements I_ControlCenter {
 
-	private I_ControlCentre concrete_CC;
+	private I_ControlCenter concrete_CC;
 	
 	public ControlCenterProxy() {
 		concrete_CC = ControlCenterFactory.produceControlCentre("http");

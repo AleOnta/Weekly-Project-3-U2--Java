@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class ControlCenterFactory {
 	 
-	 public static I_ControlCentre produceControlCentre(String inputString) {
+	 public static I_ControlCenter produceControlCentre(String inputString) {
 		 switch(inputString.toUpperCase()) {
 		 
 		 case "HTTP": 

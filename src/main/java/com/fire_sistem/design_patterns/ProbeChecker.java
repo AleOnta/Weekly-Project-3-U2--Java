@@ -9,10 +9,10 @@ public class ProbeChecker implements Observer {
 	// properties of each instance
 	@Getter
 	private final int id;
-	private I_ControlCentre controlCentre;
+	private I_ControlCenter controlCentre;
 	
 	// constructor
-	public ProbeChecker(I_ControlCentre CC) {
+	protected ProbeChecker(I_ControlCenter CC) {
 		this.id = idCounter;
 		this.controlCentre = CC;
 		idCounter++;

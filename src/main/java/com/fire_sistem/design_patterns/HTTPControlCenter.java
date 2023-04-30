@@ -1,6 +1,6 @@
 package com.fire_sistem.design_patterns;
 
-public class HTTPControlCenter implements I_ControlCentre {
+public class HTTPControlCenter implements I_ControlCenter {
 
 	private HTTPCommunication relatedCommunicationChannel;
 	private final String plainEndpoint = "http://fire_department/alarm";

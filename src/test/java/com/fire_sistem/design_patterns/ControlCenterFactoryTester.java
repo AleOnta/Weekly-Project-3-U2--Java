@@ -16,7 +16,7 @@ class ControlCenterFactoryTester {
 	@Test
 	void testProduceControlCentreCorrectly() {
 		inputString = "http";
-		I_ControlCentre controlCenter = ControlCenterFactory.produceControlCentre(inputString);
+		I_ControlCenter controlCenter = ControlCenterFactory.produceControlCentre(inputString);
 		// Checking if the returned value by ControlCenterFactory is an instance of passed class
 		assertInstanceOf(HTTPControlCenter.class, controlCenter);
 	}

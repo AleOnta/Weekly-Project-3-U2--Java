@@ -14,8 +14,8 @@ class ProbeAndSubjectTester {
 	void setUp() {
 		controlCenter = new ControlCenterProxy();
 		probe = ProbeFactory.getProbe();
-		probeChecker1 = new ProbeChecker(controlCenter);
-		probeChecker2 = new ProbeChecker(controlCenter);
+		probeChecker1 = ProbeFactory.getChecker(controlCenter);
+		probeChecker2 = ProbeFactory.getChecker(controlCenter);
 	}
 
 	@Test

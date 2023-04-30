@@ -26,10 +26,10 @@ public class FireSystemRunner implements ApplicationRunner {
 		ControlCenterProxy NationalControlCenter = new ControlCenterProxy();
 		
 		// creating a probechecker for each probe that will be created
-		ProbeChecker northernChecker = new ProbeChecker(NationalControlCenter);
-		ProbeChecker westernChecker = new ProbeChecker(NationalControlCenter);
-		ProbeChecker southernChecker = new ProbeChecker(NationalControlCenter);
-		ProbeChecker easternChecker = new ProbeChecker(NationalControlCenter);
+		ProbeChecker northernChecker = ProbeFactory.getChecker(NationalControlCenter);
+		ProbeChecker westernChecker = ProbeFactory.getChecker(NationalControlCenter);
+		ProbeChecker southernChecker = ProbeFactory.getChecker(NationalControlCenter);
+		ProbeChecker easternChecker = ProbeFactory.getChecker(NationalControlCenter);
 		
 		// creating 4 differents probe through probe factory
 		Probe northernProbe = ProbeFactory.getProbe();
